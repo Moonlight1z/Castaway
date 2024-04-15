@@ -1,0 +1,401 @@
+// Шрифты
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+// Цвета
+$bg: #191919;
+$color-text: #ffff;
+$pometka-btn: #118DA8;
+$pometka-btn-hover: #10D4FF;
+$small-btn-hover: #3B3A3A;
+$bg-panels: #000;
+// Размеры
+$h1: 65px;
+$header-footer-pometka-other: 18px;
+$btn-text: 18px;
+$main-text: 22px;
+$reviews: 36px;
+// Кнопки и скругления
+$border-panels: 32px;
+$border-btn: 6px;
+
+@mixin btn {
+    border: solid 1px $pometka-btn;
+    border-radius: $border-btn;
+    padding: 12px 17px;
+    color: $color-text;
+    // font-size: $btn-text;
+    background-color: $pometka-btn;
+    transition: 0.5s;
+
+    &:hover{
+        background-color: $pometka-btn-hover;
+        cursor: pointer;
+    }
+}
+
+@mixin small-btn {
+    border: solid 1px $bg;
+    border-radius: $border-btn;
+    padding: 2px 16px;
+    color: $color-text;
+    font-size: $btn-text;
+    background-color: $bg;
+    transition: 0.5s;
+
+    &:hover{
+        background-color: $small-btn-hover;
+    }
+}
+
+// обнуления 
+// --------------------------------------
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: $color-text;
+
+    &:active {
+        text-decoration: none;
+        color: $color-text;
+    }
+
+    &:hover {
+        text-decoration: none;
+        color: $color-text;
+    }
+}
+
+// ---------------------------------------
+
+html {
+    scroll-behavior: smooth;
+
+    body {
+        background-color: $bg;
+        font-family: "DM Sans", sans-serif;
+        color: $color-text;
+        font-weight: 400;
+    }
+}
+
+.view-btn{
+    @include btn;
+}
+
+.small-btn{
+    @include small-btn;
+}
+
+img{
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    // padding: 0 15px;
+}
+
+
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0px;
+    font-size: $header-footer-pometka-other;
+
+    .castaway {}
+
+    .navigation-items {
+        list-style: none;
+        display: flex;
+        gap: 40px;
+
+        a {
+            transition: 0.5s;
+
+            &:hover {
+                color: $pometka-btn;
+            }
+        }
+    }
+}
+
+
+
+.take-your {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.take-your-text {
+    font-size: 70px;
+    letter-spacing: 3.2px;
+
+
+    .take-your-text__underline {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 11px;
+            bottom: 0;
+            left: 0;
+            background: url(../img/line.svg);
+            // background-position: center;
+            // background-size: cover;
+            // background-repeat: no-repeat;
+            
+        }
+    }
+
+    .take-your-text__bold {
+        font-weight: 700;
+    }
+}
+
+.listen-on {
+    margin-top: 75px;
+
+    .listen-on__text {
+        font-size: 18px;
+        padding-bottom: 16px;
+    }
+}
+
+.listen-on-img {
+    display: flex;
+    gap: 17px;
+}
+
+
+
+.lastet-episodes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 40px;
+
+    .lastet-episodes__text{
+        font-size: $h1;
+        letter-spacing: 2.88px;
+    }
+}
+
+.episode-card{
+    background-color: $bg-panels;
+    border-radius: $border-panels;
+    display: flex;
+    justify-content: space-between;
+    // align-items: center;
+    padding: 40px;
+    margin-bottom: 60px;
+}
+
+.card{
+    
+
+    .card__num{
+        color: $pometka-btn;
+        margin: 48px 0 18px 0;
+    }
+
+    .card__title{
+        font-size: $h1;
+    }
+
+    .card__description{
+        margin: 28px 0 38px 0;
+        font-size: $main-text;
+        color: #B2B2B2;
+    }
+}
+
+
+
+.jacob{
+    margin-top: 180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.jacob-info{
+
+    .jacob-info__txt-btn{
+        padding: 25px 0px;
+        color: $pometka-btn;
+    }
+
+    .jacob-info__title{
+        font-size: $h1;
+    }
+
+    .jacob-info__text{
+        margin-top: 33px;
+        font-size: $main-text;
+        color: #B2B2B2;
+    }
+}
+
+
+
+.form-card{
+    margin-top: 180px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background-color: $bg-panels;
+    border-radius: $border-panels;
+    padding: 60px 60px 75px 60px;
+
+
+    .form__text{
+        color: $pometka-btn;
+    }
+
+    .form__title{
+        font-size: 72px;
+    }
+
+    &::after{
+        position: absolute;
+        content: '';
+        width: 146.87px;
+        height: 90px;
+        bottom: -30px;
+        left: -40px;
+        // background-image: url("../img/line.svg");
+        background: url(../img/vspishka.svg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+.form-site{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    
+    .form-site__input{
+        color: #BABABA;
+        border-radius: $border-btn;
+        border: none;
+        padding: 27px 0 27px 20px;
+        width: 500px;
+        background-color: $bg;
+        outline: none;
+        
+        &::placeholder{
+            font-size: $main-text;
+        }
+    }
+
+    .form-site__btn{
+        @include btn;
+    }
+}
+
+
+
+.grid-fitbek{
+    margin-top: 180px;
+    display: grid;
+    grid-template-columns:  repeat(auto-fill, minmax(200px, 423px));
+    grid-template-rows: repeat(2, 365px);
+    grid-gap: 15px;
+    justify-content: center;
+    align-content: center;
+}
+
+.card-fitbek{
+    padding: 50px;
+
+    display: flex;
+    flex-direction: column;
+    background-color: $bg-panels;
+    border-radius: $border-panels;
+
+    .card-fitbek_stars{
+        display: flex;
+        gap: 5px;
+        margin-bottom: 21px;
+    }
+
+    .card-fitbek__fitbek{
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .card-fitbek__user{
+        font-size: $main-text;
+        color: #B2B2B2;
+    }
+}
+
+
+
+.podval{
+    display: flex;
+    justify-content: space-between;
+    margin: 180px 0 80px 0;
+
+    .podval-castaway{
+        margin-bottom: 25px;
+
+        .podval-castaway__mess{
+            width: max-content;
+            display: flex;
+            gap: 10px;
+        }
+    }
+
+    .podval-nav{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        a{
+            transition: 0.5s;
+            
+            &:hover{
+                color: $pometka-btn;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .podval-info{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        p{
+            transition: 0.5s;
+            
+            &:hover{
+                color: $pometka-btn;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .podval-media{
+        display: flex;
+        align-items: start;
+        gap: 17px;
+    }
+}

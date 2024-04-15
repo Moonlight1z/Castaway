@@ -1,0 +1,315 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+a:active {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+html body {
+  background-color: #191919;
+  font-family: "DM Sans", sans-serif;
+  color: white;
+  font-weight: 400;
+}
+
+.view-btn {
+  border: solid 1px #118DA8;
+  border-radius: 6px;
+  padding: 12px 17px;
+  color: white;
+  background-color: #118DA8;
+  transition: 0.5s;
+}
+.view-btn:hover {
+  background-color: #10D4FF;
+  cursor: pointer;
+}
+
+.small-btn {
+  border: solid 1px #191919;
+  border-radius: 6px;
+  padding: 2px 16px;
+  color: white;
+  font-size: 18px;
+  background-color: #191919;
+  transition: 0.5s;
+}
+.small-btn:hover {
+  background-color: #3B3A3A;
+}
+
+img {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0px;
+  font-size: 18px;
+}
+.navigation .navigation-items {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+.navigation .navigation-items a {
+  transition: 0.5s;
+}
+.navigation .navigation-items a:hover {
+  color: #118DA8;
+}
+
+.take-your {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.take-your-text {
+  font-size: 70px;
+  letter-spacing: 3.2px;
+}
+.take-your-text .take-your-text__underline {
+  position: relative;
+}
+.take-your-text .take-your-text__underline::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 11px;
+  bottom: 0;
+  left: 0;
+  background: url(../img/line.svg);
+}
+.take-your-text .take-your-text__bold {
+  font-weight: 700;
+}
+
+.listen-on {
+  margin-top: 75px;
+}
+.listen-on .listen-on__text {
+  font-size: 18px;
+  padding-bottom: 16px;
+}
+
+.listen-on-img {
+  display: flex;
+  gap: 17px;
+}
+
+.lastet-episodes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+.lastet-episodes .lastet-episodes__text {
+  font-size: 65px;
+  letter-spacing: 2.88px;
+}
+
+.episode-card {
+  background-color: #000;
+  border-radius: 32px;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  margin-bottom: 60px;
+}
+
+.card .card__num {
+  color: #118DA8;
+  margin: 48px 0 18px 0;
+}
+.card .card__title {
+  font-size: 65px;
+}
+.card .card__description {
+  margin: 28px 0 38px 0;
+  font-size: 22px;
+  color: #B2B2B2;
+}
+
+.jacob {
+  margin-top: 180px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.jacob-info .jacob-info__txt-btn {
+  padding: 25px 0px;
+  color: #118DA8;
+}
+.jacob-info .jacob-info__title {
+  font-size: 65px;
+}
+.jacob-info .jacob-info__text {
+  margin-top: 33px;
+  font-size: 22px;
+  color: #B2B2B2;
+}
+
+.form-card {
+  margin-top: 180px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  background-color: #000;
+  border-radius: 32px;
+  padding: 60px 60px 75px 60px;
+}
+.form-card .form__text {
+  color: #118DA8;
+}
+.form-card .form__title {
+  font-size: 72px;
+}
+.form-card::after {
+  position: absolute;
+  content: "";
+  width: 146.87px;
+  height: 90px;
+  bottom: -30px;
+  left: -40px;
+  background: url(../img/vspishka.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.form-site {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+.form-site .form-site__input {
+  color: #BABABA;
+  border-radius: 6px;
+  border: none;
+  padding: 27px 0 27px 20px;
+  width: 500px;
+  background-color: #191919;
+  outline: none;
+}
+.form-site .form-site__input::-moz-placeholder {
+  font-size: 22px;
+}
+.form-site .form-site__input::placeholder {
+  font-size: 22px;
+}
+.form-site .form-site__btn {
+  border: solid 1px #118DA8;
+  border-radius: 6px;
+  padding: 12px 17px;
+  color: white;
+  background-color: #118DA8;
+  transition: 0.5s;
+}
+.form-site .form-site__btn:hover {
+  background-color: #10D4FF;
+  cursor: pointer;
+}
+
+.grid-fitbek {
+  margin-top: 180px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 423px));
+  grid-template-rows: repeat(2, 365px);
+  grid-gap: 15px;
+  justify-content: center;
+  align-content: center;
+}
+
+.card-fitbek {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+  border-radius: 32px;
+}
+.card-fitbek .card-fitbek_stars {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 21px;
+}
+.card-fitbek .card-fitbek__fitbek {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.card-fitbek .card-fitbek__user {
+  font-size: 22px;
+  color: #B2B2B2;
+}
+
+.podval {
+  display: flex;
+  justify-content: space-between;
+  margin: 180px 0 80px 0;
+}
+.podval .podval-castaway {
+  margin-bottom: 25px;
+}
+.podval .podval-castaway .podval-castaway__mess {
+  width: -moz-max-content;
+  width: max-content;
+  display: flex;
+  gap: 10px;
+}
+.podval .podval-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.podval .podval-nav a {
+  transition: 0.5s;
+}
+.podval .podval-nav a:hover {
+  color: #118DA8;
+  cursor: pointer;
+}
+.podval .podval-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.podval .podval-info p {
+  transition: 0.5s;
+}
+.podval .podval-info p:hover {
+  color: #118DA8;
+  cursor: pointer;
+}
+.podval .podval-media {
+  display: flex;
+  align-items: start;
+  gap: 17px;
+}
