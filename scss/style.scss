@@ -26,7 +26,7 @@ $border-btn: 6px;
     background-color: $pometka-btn;
     transition: 0.5s;
 
-    &:hover{
+    &:hover {
         background-color: $pometka-btn-hover;
         cursor: pointer;
     }
@@ -41,7 +41,7 @@ $border-btn: 6px;
     background-color: $bg;
     transition: 0.5s;
 
-    &:hover{
+    &:hover {
         background-color: $small-btn-hover;
     }
 }
@@ -82,15 +82,15 @@ html {
     }
 }
 
-.view-btn{
+.view-btn {
     @include btn;
 }
 
-.small-btn{
+.small-btn {
     @include small-btn;
 }
 
-img{
+img {
     cursor: pointer;
 }
 
@@ -109,7 +109,39 @@ img{
     padding: 30px 0px;
     font-size: $header-footer-pometka-other;
 
-    .castaway {}
+    .burger {
+        position: relative;
+        width: 40px;
+        height: 25px;
+        cursor: pointer;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        color: $color-text;
+        display: none;  
+
+        .burger__line {
+            position: absolute;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: currentColor;
+
+            &:first-child {
+                top: 0;
+            }
+
+            &:nth-child(2) {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            &:last-child{
+                bottom: 0;
+            }
+        }
+    }
 
     .navigation-items {
         list-style: none;
@@ -154,7 +186,7 @@ img{
             // background-position: center;
             // background-size: cover;
             // background-repeat: no-repeat;
-            
+
         }
     }
 
@@ -179,20 +211,20 @@ img{
 
 
 
-.lastet-episodes{
+.lastet-episodes {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 100px;
     margin-bottom: 40px;
 
-    .lastet-episodes__text{
+    .lastet-episodes__text {
         font-size: $h1;
         letter-spacing: 2.88px;
     }
 }
 
-.episode-card{
+.episode-card {
     background-color: $bg-panels;
     border-radius: $border-panels;
     display: flex;
@@ -202,19 +234,18 @@ img{
     margin-bottom: 60px;
 }
 
-.card{
-    
+.card {
 
-    .card__num{
+    .card__num {
         color: $pometka-btn;
         margin: 48px 0 18px 0;
     }
 
-    .card__title{
+    .card__title {
         font-size: $h1;
     }
 
-    .card__description{
+    .card__description {
         margin: 28px 0 38px 0;
         font-size: $main-text;
         color: #B2B2B2;
@@ -223,25 +254,33 @@ img{
 
 
 
-.jacob{
+.jacob {
     margin-top: 180px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    .jacob__photo{
+        img{
+            width: 100%;
+        }
+    }
 }
 
-.jacob-info{
+.jacob-info {
 
-    .jacob-info__txt-btn{
+    .jacob-info__txt-btn {
         padding: 25px 0px;
         color: $pometka-btn;
     }
 
-    .jacob-info__title{
-        font-size: $h1;
+    .jacob-info__title {
+        font-size: 35px;
     }
 
-    .jacob-info__text{
+    .jacob-info__text {
         margin-top: 33px;
         font-size: $main-text;
         color: #B2B2B2;
@@ -250,7 +289,7 @@ img{
 
 
 
-.form-card{
+.form-card {
     margin-top: 180px;
     position: relative;
     display: flex;
@@ -260,15 +299,15 @@ img{
     padding: 60px 60px 75px 60px;
 
 
-    .form__text{
+    .form__text {
         color: $pometka-btn;
     }
 
-    .form__title{
+    .form__title {
         font-size: 72px;
     }
 
-    &::after{
+    &::after {
         position: absolute;
         content: '';
         width: 146.87px;
@@ -283,14 +322,14 @@ img{
     }
 }
 
-.form-site{
+.form-site {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     gap: 20px;
-    
-    .form-site__input{
+
+    .form-site__input {
         color: #BABABA;
         border-radius: $border-btn;
         border: none;
@@ -298,30 +337,30 @@ img{
         width: 500px;
         background-color: $bg;
         outline: none;
-        
-        &::placeholder{
+
+        &::placeholder {
             font-size: $main-text;
         }
     }
 
-    .form-site__btn{
+    .form-site__btn {
         @include btn;
     }
 }
 
 
 
-.grid-fitbek{
+.grid-fitbek {
     margin-top: 180px;
     display: grid;
-    grid-template-columns:  repeat(auto-fill, minmax(200px, 423px));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 423px));
     grid-template-rows: repeat(2, 365px);
     grid-gap: 15px;
     justify-content: center;
     align-content: center;
 }
 
-.card-fitbek{
+.card-fitbek {
     padding: 50px;
 
     display: flex;
@@ -329,18 +368,18 @@ img{
     background-color: $bg-panels;
     border-radius: $border-panels;
 
-    .card-fitbek_stars{
+    .card-fitbek_stars {
         display: flex;
         gap: 5px;
         margin-bottom: 21px;
     }
 
-    .card-fitbek__fitbek{
+    .card-fitbek__fitbek {
         font-size: 36px;
         margin-bottom: 20px;
     }
 
-    .card-fitbek__user{
+    .card-fitbek__user {
         font-size: $main-text;
         color: #B2B2B2;
     }
@@ -348,54 +387,244 @@ img{
 
 
 
-.podval{
+.podval {
     display: flex;
     justify-content: space-between;
     margin: 180px 0 80px 0;
 
-    .podval-castaway{
+    .podval-castaway {
         margin-bottom: 25px;
 
-        .podval-castaway__mess{
+        .podval-castaway__mess {
             width: max-content;
             display: flex;
             gap: 10px;
         }
     }
 
-    .podval-nav{
+    .podval-nav {
         display: flex;
         flex-direction: column;
         gap: 10px;
 
-        a{
+        a {
             transition: 0.5s;
-            
-            &:hover{
+
+            &:hover {
                 color: $pometka-btn;
                 cursor: pointer;
             }
         }
     }
 
-    .podval-info{
+    .podval-info {
         display: flex;
         flex-direction: column;
         gap: 10px;
 
-        p{
+        p {
             transition: 0.5s;
-            
-            &:hover{
+
+            &:hover {
                 color: $pometka-btn;
                 cursor: pointer;
             }
         }
     }
 
-    .podval-media{
+    .podval-media {
         display: flex;
         align-items: start;
         gap: 17px;
+    }
+}
+
+
+
+// Адаптив
+
+@media (max-width: 1300px) {
+    .container {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .take-your {
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 80px;
+        
+        .take-your__img{
+            width: 100%;
+        }
+    }
+
+    .episode-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img{
+            width: 100%;
+            margin-bottom: 15px;
+        }
+    }
+    
+    .card {
+        .card__title {
+            font-size: 35px;
+        }
+    }
+
+    .form-card {
+        margin-top: 180px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        padding: 60px 60px 75px 60px;
+        text-align: center;
+
+        .form__title {
+            font-size: 35px;
+        }
+    
+        &::after {
+            position: absolute;
+            content: '';
+            width: 146.87px;
+            height: 90px;
+            bottom: -30px;
+            left: -40px;
+            // background-image: url("../img/line.svg");
+            background: url(../img/vspishka.svg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+    
+    .form-site {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+    
+        .form-site__input {
+            padding: 17px 0 17px 20px;
+            width: 500px;
+        }
+    }
+
+    .podval {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        margin: 180px 0 80px 0;
+        text-align: center;
+    
+        .podval-castaway {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 0px;
+            
+            .podval-castaway__mess {
+                width: max-content;
+                display: flex;
+                gap: 10px;
+            }
+        }
+    
+        .podval-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 25px;
+    
+            a {
+                transition: 0.5s;
+    
+                &:hover {
+                    color: $pometka-btn;
+                    cursor: pointer;
+                }
+            }
+        }
+    
+        .podval-info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            p {
+                transition: 0.5s;
+    
+                &:hover {
+                    color: $pometka-btn;
+                    cursor: pointer;
+                }
+            }
+        }
+    
+        .podval-media {
+            display: flex;
+            align-items: start;
+            gap: 17px;
+        }
+    }
+}
+
+@media (max-width: 700px){
+    .navigation {
+
+        .burger {
+           display: block;
+        }
+    
+        .navigation-items {
+           display: none;
+        }
+    }
+
+    .lastet-episodes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 100px;
+        margin-bottom: 40px;
+        gap: 15px;
+    
+        .lastet-episodes__text {
+            font-size: 35px;
+            letter-spacing: 2.88px;
+        }
+    }
+
+    .form-site {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+    
+        .form-site__input {
+            padding: 17px 0 17px 20px;
+            width: 100%;
+        }
     }
 }
