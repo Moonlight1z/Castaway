@@ -257,7 +257,6 @@ img {
 .jacob {
     margin-top: 180px;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 15px;
@@ -277,7 +276,7 @@ img {
     }
 
     .jacob-info__title {
-        font-size: 35px;
+        font-size: $h1;
     }
 
     .jacob-info__text {
@@ -511,6 +510,28 @@ img {
         }
     }
     
+    .jacob {
+        margin-top: 180px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    
+        .jacob__photo{
+            img{
+                width: 100%;
+            }
+        }
+    }
+    
+    .jacob-info {
+
+        .jacob-info__title {
+            font-size: 35px;
+        }
+    }
+
     .form-site {
         display: flex;
         flex-direction: column;
